@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | TechWorld</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .dash-wrap {
+        min-height: 100vh;
+        padding: 24px;
+      }
+      .dash-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .dash-card {
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 18px;
+      }
+      .dash-btn {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        background: #ffffff;
+        color: #111;
+      }
+      .muted {
+        opacity: 0.8;
+      }
+      .table-wrap {
+        overflow: auto;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        min-width: 900px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        vertical-align: top;
+      }
+      th {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        white-space: nowrap;
+      }
+      td.fecha,
+      td.telefono {
+        white-space: nowrap;
+      }
+      td.mensaje {
+        min-width: 280px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="dash-wrap">
+      <div class="dash-top">
+        <div>
+          <h1 style="margin: 0">Dashboard</h1>
+          <div class="muted">Sesión: <span id="userEmail">...</span></div>
+        </div>
+
+        <button id="logoutBtn" class="dash-btn" type="button">Cerrar sesión</button>
+      </div>
+
+      <section class="dash-card">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+          "
+        >
+          <h2 style="margin: 0">Leads (contactos)</h2>
+          <button id="refreshBtn" class="dash-btn" type="button">Actualizar</button>
+        </div>
+
+        <p class="muted" style="margin: 0 0 14px 0">
+          Aquí se muestran los contactos enviados desde el formulario.
+        </p>
+
+        <div id="dashMsg" class="muted" style="margin-bottom: 10px"></div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Mensaje</th>
+              </tr>
+            </thead>
+            <tbody id="leadsBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./dashboard.js"></script>
+  </body>
+</html>

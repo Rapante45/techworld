@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology World | Expertos en Tecnología</title>
+  <meta name="description" content="Technology World - Expertos en tecnología, soluciones digitales, soporte técnico y desarrollo web.">
+
+  <link rel="stylesheet" href="./style.css">
+<script type="module" src="./main.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        
+        <div class="logo-text">
+          <h1>Technology World</h1>
+          <span>Expertos en Tecnología</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn">Contacto</a>
+      </nav>
+
+      <!-- Toggle Dark/Light -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        <span class="theme-toggle__text">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+
+      <div class="hero-text">
+        <div>
+          <h2>Soluciones tecnológicas<br>para tu negocio</h2>
+          <p>
+            En Technology World brindamos servicios profesionales en desarrollo web,
+            soporte técnico, redes y soluciones digitales adaptadas a tus necesidades.
+          </p>
+          <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="hero-box">
+        <h3>Contáctanos</h3>
+<form id="contactForm" class="contact-form">
+  <div class="field">
+    <input id="nombre" type="text" required />
+    <label for="nombre">Nombre completo</label>
+  </div>
+
+  <div class="field">
+    <input id="correo" type="email" required />
+    <label for="correo">Correo electrónico</label>
+  </div>
+
+  <div class="field">
+    <input id="telefono" type="text" required />
+    <label for="telefono">Teléfono</label>
+  </div>
+
+  <div class="field">
+    <textarea id="mensaje" rows="4" required></textarea>
+    <label for="mensaje">Cuéntanos qué necesitas</label>
+  </div>
+
+  <button type="submit" class="btn-submit">
+    <span class="btn-text">Enviar</span>
+    <span class="btn-loader"></span>
+  </button>
+
+  <p id="formMsg" class="form-msg"></p>
+</form>
+
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+  
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+
+      <div class="services">
+        <div class="card">
+          <h3>Desarrollo Web</h3>
+          <p>Creación de páginas web modernas, responsivas y optimizadas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Soporte Técnico</h3>
+          <p>Mantenimiento, reparación y optimización de equipos y sistemas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Redes y Conectividad</h3>
+          <p>Configuración de redes, cableado estructurado y Wi-Fi empresarial.</p>
+        </div>
+
+        <div class="card">
+          <h3>Soluciones Digitales</h3>
+          <p>Automatización de procesos y sistemas personalizados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section light" id="nosotros">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegirnos?</h2>
+      <p class="center-text">
+        Trabajamos con responsabilidad, profesionalismo y enfoque en resultados.
+        Nuestro objetivo es que la tecnología sea una ventaja para tu empresa.
+      </p>
+
+      <div class="features">
+        <div>✔ Atención personalizada</div>
+        <div>✔ Soluciones claras</div>
+        <div>✔ Experiencia técnica</div>
+        <div>✔ Soporte confiable</div>
+      </div>
+    </div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="stat-number">+5</div>
+    <div class="stat-label">Años de experiencia</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-number">+120</div>
+    <div class="stat-label">Proyectos / servicios</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-number">Guatemala</div>
+    <div class="stat-label">Atención y soporte</div>
+  </div>
+</div>
+
+
+
+  </section>
+
+
+  <a
+  class="wa-float"
+  href="https://wa.me/50254374051?text=Hola%20Technology%20World,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios."
+  target="_blank"
+  rel="noopener"
+  aria-label="WhatsApp"
+>
+  <span class="wa-icon" aria-hidden="true">💬</span>
+  <span class="wa-text">WhatsApp</span>
+</a>
+
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <p class="center-text">
+        Escríbenos y con gusto te asesoramos.
+      </p>
+
+      <div class="contact-info">
+        <div>📧 contacto@technologyworld.gt</div>
+        <div>📞 +502 0000-0000</div>
+        <div>📍 Guatemala</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Technology World | Expertos en Tecnología</p>
+  </footer>
+
+  <script type="module" src="./contact.js"></script>
+
+
+</body>
+</html>
