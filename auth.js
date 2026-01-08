@@ -29,6 +29,17 @@ form.addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
 
+  
+  const allowedDomain = "@techworldgt.com";
+
+if (!email.toLowerCase().endsWith(allowedDomain)) {
+  setMsg(`Solo se permite correo corporativo (${allowedDomain}).`, "error");
+  return;
+}
+
+
+  
+
   const { data, error } = await supabase.auth.signInWithPassword({
     email,
     password,
@@ -46,3 +57,4 @@ form.addEventListener("submit", async (e) => {
     setMsg("No se pudo iniciar sesión.", "error");
   }
 });
+
