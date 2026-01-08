@@ -34,7 +34,7 @@ async function protectPage() {
   const { data } = await supabase.auth.getSession();
 
   if (!data?.session) {
-    window.location.href = "./login.html";
+    window.location.href = "./";
     return null;
   }
 
@@ -82,7 +82,7 @@ async function loadLeads() {
 
 logoutBtn.addEventListener("click", async () => {
   await supabase.auth.signOut();
-  window.location.href = "./login.html";
+  window.location.href = "./";
 });
 
 refreshBtn?.addEventListener("click", loadLeads);
