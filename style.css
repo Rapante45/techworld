@@ -1111,4 +1111,27 @@ body{
   background: #071225 !important;
 }
 
+/* FORCE DARK (si algo te pisa las variables) */
+body.dark{
+  background: #0b1220 !important;
+  color: #eaf2f6 !important;
+}
+
+body.dark .header{
+  background: #0f1a2d !important;
+}
+
+body.dark .section.light{
+  background: #0f1a2d !important;
+  border-color: rgba(255,255,255,.12) !important;
+}
+
+body.dark .section-title{
+  color: #a7d7ea !important;
+}
+
+body.dark .center-text{
+  color: rgba(255,255,255,.75) !important;
+}
+
 
