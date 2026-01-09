@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===== Toggle Theme =====
   const themeToggle = document.getElementById("themeToggle");
   const savedTheme = localStorage.getItem("tw_theme");
+  // Dark por defecto si no hay nada guardado
+if (savedTheme === null) {
+  setTheme(true);
+} else {
+  setTheme(savedTheme === "dark");
+}
 
   function setTheme(isDark) {
     document.body.classList.toggle("dark", isDark);
@@ -74,3 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
