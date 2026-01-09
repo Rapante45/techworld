@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology World | Expertos en Tecnología</title>
+  <meta name="description" content="Technology World - Expertos en tecnología, soluciones digitales, soporte técnico y desarrollo web.">
+
+  <link rel="stylesheet" href="./style.css">
+<script type="module" src="./main.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+     <div class="logo">
+  <div class="logo-text">
+    <h1>
+      Technology World
+      <span class="logo-pbx">PBX: 2254-9346</span>
+    </h1>
+    <span>Expertos en Tecnología</span>
+  </div>
+</div>
+
+
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn">Contacto</a>
+      </nav>
+
+      
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+
+      <div class="hero-text">
+        <div>
+          <h2>Soluciones tecnológicas<br>para tu negocio</h2>
+          <p>
+            En Technology World brindamos servicios profesionales en desarrollo web,
+            soporte técnico, redes y soluciones digitales adaptadas a tus necesidades.
+          </p>
+          <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="hero-box">
+        <h3>Contáctanos</h3>
+<form id="contactForm" class="contact-form">
+  <div class="field">
+    <input id="nombre" type="text" required />
+    <label for="nombre">Nombre completo</label>
+  </div>
+
+  <div class="field">
+    <input id="correo" type="email" required />
+    <label for="correo">Correo electrónico</label>
+  </div>
+
+  <div class="field">
+    <input id="telefono" type="text" required />
+    <label for="telefono">Teléfono</label>
+  </div>
+
+  <div class="field">
+    <textarea id="mensaje" rows="4" required></textarea>
+    <label for="mensaje">Cuéntanos qué necesitas</label>
+  </div>
+
+  <button type="submit" class="btn-submit">
+    <span class="btn-text">Enviar</span>
+    <span class="btn-loader"></span>
+  </button>
+
+  <p id="formMsg" class="form-msg"></p>
+</form>
+
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+  
+
+   <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="services-head">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        
+      </div>
+
+
+      
+<article class="service-card service-card--poster">
+  <!-- Imagen tipo afiche con texto encima -->
+  <div class="service-poster">
+    <img src="./Centrales Telefonicas.jpg" alt="Centrales Telefonicas" />
+
+   
+  </div>
+
+  <!-- Texto normal a la derecha -->
+  <div class="service-body">
+    <h3 class="service-title">Centrales Telefonicas</h3>
+    <p class="service-text">
+      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
+      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
+    </p>
+
+    <div class="service-actions">
+  
+
+  <!-- POPUP 1: Partners -->
+  <div class="partners pop">
+    <button class="partners-btn pop-btn" type="button" aria-haspopup="dialog">
+      <span class="partners-icon" aria-hidden="true">🤝</span>
+      Partners
+    </button>
+
+    <div class="partners-pop pop-panel" role="dialog" aria-label="Partners">
+      <div class="partners-grid">
+        <a class="partner-item" href="#" onclick="return false;">
+          <img src="./Grandstream.jpg" alt="Grandstream" />
+          <span>Grandstream</span>
+        </a>
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP 2: Certificaciones (ejemplo distinto) -->
+  <div class="certs pop">
+    <button class="partners-btn pop-btn" type="button" aria-haspopup="dialog">
+      <span class="partners-icon" aria-hidden="true">👨🏻‍💻</span>
+      Soporte
+    </button>
+
+    <div class="certs-pop pop-panel" role="dialog" aria-label="Certificaciones">
+      <div class="partners-grid">
+        <a class="partner-item" href="#" onclick="return false;">
+          <img src="./NEC.png" alt="NEC" />
+          <span>NEC</span>
+        </a>
+        <a class="partner-item" href="#" onclick="return false;">
+          <img src="./Panasonic2.png" alt="Panasonic" />
+          <span>Panasonic</span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+
+  <a class="service-link" href="#contacto">Solicitar info</a>
+</div>
+
+</article>
+
+<br> 
+
+
+
+
+
+<!-- Cableado Estructurado -->
+<article class="service-card service-card--poster">
+  <div class="service-poster">
+    <img src="./cableado-estructurado.jpg" alt="Cableado Estructurado" />
+
+    
+  </div>
+
+  <div class="service-body">
+    <h3 class="service-title">Cableado Estructurado</h3>
+    <p class="service-text">
+      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
+      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
+    </p>
+
+    <div class="service-actions">
+      <!-- POPUP: Partners -->
+      <div class="pop">
+        <button class="partners-btn" type="button" aria-haspopup="dialog">
+          <span class="partners-icon" aria-hidden="true">🤝</span>
+          Partners
+        </button>
+
+        <div class="pop-panel" role="dialog" aria-label="Partners">
+          <div class="partners-grid">
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Siemon.png" alt="Siemon" />
+              <span>Siemon</span>
+            </a>
+
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Panduit.png" alt="Panduit" />
+              <span>Panduit</span>
+            </a>
+
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Linet.jpg" alt="Linet" />
+              <span>Linet</span>
+            </a>
+
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Ortronics.png" alt="Ortronics" />
+              <span>Ortronics</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a class="service-link" href="#contacto">Solicitar info</a>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+<br>
+
+
+
+
+
+
+
+
+<!-- Networking -->
+<article class="service-card service-card--poster">
+  <div class="service-poster">
+    <img src="./Networking.png" alt=" Networking" />
+
+    
+  </div>
+
+  <div class="service-body">
+    <h3 class="service-title">Networking</h3>
+    <p class="service-text">
+      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
+      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
+    </p>
+
+    <div class="service-actions">
+      <!-- POPUP: Partners -->
+      <div class="pop">
+        <button class="partners-btn" type="button" aria-haspopup="dialog">
+          <span class="partners-icon" aria-hidden="true">🤝</span>
+          Partners
+        </button>
+
+        <!-- Zyxel -->
+        <div class="pop-panel" role="dialog" aria-label="Partners">
+          <div class="partners-grid">
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Zyxel.png" alt="Zyxel" />
+              <span>Siemon</span>
+            </a>
+
+            <!-- Grandstream -->
+
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Grandstream.jpg" alt="Grandstream" />
+              <span>Grandstream</span>
+            </a>
+
+
+            <!-- Mikrotik  -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Mikrotik.png" alt="Mikrotik" />
+              <span>Mikrotik</span>
+            </a>
+            <!-- Cisco -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Cisco.jpg" alt="Cisco" />
+              <span>Cisco</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a class="service-link" href="#contacto">Solicitar info</a>
+    </div>
+  </div>
+</article>
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<!-- Soluciones Wifi -->
+<article class="service-card service-card--poster">
+  <div class="service-poster">
+    <img src="./Wifi.jpeg" alt=" Wifi" />
+
+    
+  </div>
+
+  <div class="service-body">
+    <h3 class="service-title">Soluciones Wifi</h3>
+    <p class="service-text">
+      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
+      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
+    </p>
+
+    <div class="service-actions">
+      <!-- POPUP: Partners -->
+      <div class="pop">
+        <button class="partners-btn" type="button" aria-haspopup="dialog">
+          <span class="partners-icon" aria-hidden="true">🤝</span>
+          Partners
+        </button>
+
+        <!-- Ubiquiti  -->
+        <div class="pop-panel" role="dialog" aria-label="Partners">
+          <div class="partners-grid">
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Ubiquiti.png" alt="Ubiquiti" />
+              <span>Ubiquiti</span>
+            </a>
+
+            <!-- Zyxel  -->
+
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Zyxel.png" alt="Zyxel " />
+              <span>Zyxel</span>
+            </a>
+
+
+            <!-- Omada  -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Omada.jpg" alt="Omada" />
+              <span>Omada</span>
+            </a>
+            <!-- Grandstream -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Grandstream.jpg" alt="Grandstream" />
+              <span>Grandstream</span>
+            </a>
+
+            <!-- Aruba -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Aruba.jpg" alt="Aruba" />
+              <span>Aruba</span>
+            </a>
+
+
+
+            <!-- Meraki -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Meraki.png" alt="Meraki" />
+              <span>Meraki</span>
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+
+      <a class="service-link" href="#contacto">Solicitar info</a>
+    </div>
+  </div>
+</article>
+
+
+
+
+<br>
+
+
+
+<!-- Video Vigilancia -->
+<article class="service-card service-card--poster">
+  <div class="service-poster">
+    <img src="./Videovigilancia.png" alt=" Wifi" />
+
+    
+  </div>
+
+  <div class="service-body">
+    <h3 class="service-title">Soluciones Wifi</h3>
+    <p class="service-text">
+      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
+      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
+    </p>
+
+    <div class="service-actions">
+      <!-- POPUP: Partners -->
+      <div class="pop">
+        <button class="partners-btn" type="button" aria-haspopup="dialog">
+          <span class="partners-icon" aria-hidden="true">🤝</span>
+          Partners
+        </button>
+
+        <!-- Hikvision  -->
+        <div class="pop-panel" role="dialog" aria-label="Partners">
+          <div class="partners-grid">
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Hikvision.png" alt="Hikvision" />
+              <span>Hikvision</span>
+            </a>
+
+            <!-- Dahua  -->
+
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Dahua.jpg" alt="Dahua " />
+              <span>Dahua</span>
+            </a>
+
+
+            <!-- Unifi  -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Unifi.png" alt="Unifi" />
+              <span>Unifi</span>
+            </a>
+          
+
+          </div>
+        </div>
+      </div>
+
+      <a class="service-link" href="#contacto">Solicitar info</a>
+    </div>
+  </div>
+</article>
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+<!-- Soporte y venta de equipo de computo -->
+<article class="service-card service-card--poster">
+  <div class="service-poster">
+    <img src="./Computo.jpg" alt=" Wifi" />
+
+    
+  </div>
+
+  <div class="service-body">
+    <h3 class="service-title">Soluciones Wifi</h3>
+    <p class="service-text">
+      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
+      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
+    </p>
+
+    <div class="service-actions">
+      <!-- POPUP: Partners -->
+      <div class="pop">
+        <button class="partners-btn" type="button" aria-haspopup="dialog">
+          <span class="partners-icon" aria-hidden="true">🤝</span>
+          Partners
+        </button>
+
+        <!-- Dell -->
+        <div class="pop-panel" role="dialog" aria-label="Partners">
+          <div class="partners-grid">
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Dell.jpg" alt="Dell" />
+              <span>Dell</span>
+            </a>
+
+            <!-- HP  -->
+
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./HP.jpg" alt="HP " />
+              <span>HP</span>
+            </a>
+
+
+            <!-- Lenovo  -->
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Lenovo.png" alt="Lenovo" />
+              <span>Lenovo</span>
+            </a>
+          
+
+            <!-- !-- Kinsgton  --> 
+            <a class="partner-item" href="#" onclick="return false;">
+              <img src="./Kingston.jpg" alt="Kinsgton" />
+              <span>Kinsgton</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+      <a class="service-link" href="#contacto">Solicitar info</a>
+    </div>
+  </div>
+</article>
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- NOSOTROS -->
+  <section class="section light" id="nosotros">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegirnos?</h2>
+      <p class="center-text">
+        Trabajamos con responsabilidad, profesionalismo y enfoque en resultados.
+        Nuestro objetivo es que la tecnología sea una ventaja para tu empresa.
+      </p>
+
+      <div class="features">
+        <div>✔ Atención personalizada</div>
+        <div>✔ Soluciones claras</div>
+        <div>✔ Experiencia técnica</div>
+        <div>✔ Soporte confiable</div>
+      </div>
+    </div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="stat-number">+10</div>
+    <div class="stat-label">Años de experiencia</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-number">+120</div>
+    <div class="stat-label">Proyectos / servicios</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-number">Guatemala</div>
+    <div class="stat-label">Atención y soporte</div>
+  </div>
+</div>
+
+
+
+  </section>
+
+
+  <a
+  class="wa-float"
+  href="https://wa.me/50222549346?text=Hola%20Technology%20World,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios."
+  target="_blank"
+  rel="noopener"
+  aria-label="WhatsApp"
+>
+  <span class="wa-icon" aria-hidden="true">💬</span>
+  <span class="wa-text">WhatsApp</span>
+</a>
+
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <p class="center-text">
+        Escríbenos y con gusto te asesoramos.
+      </p>
+
+      <div class="contact-info">
+        <div>📧 contacto@technologyworld.gt</div>
+        <div>📞 +502 2254-9346</div>
+        <div>📍 Guatemala</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Technology World | Expertos en Tecnología</p>
+  </footer>
+
+  <script type="module" src="./contact.js"></script>
+
+
+</body>
+</html>
