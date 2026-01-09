@@ -224,29 +224,19 @@ img{
   gap: 14px;
 }
 
-.field { position: relative; }
-
-.field input,
-.field textarea {
-  width: 100%;
-  padding: 14px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.07);
-  color: #fff;
-  font-size: 14px;
-  outline: none;
-  transition: border 0.2s ease, background 0.2s ease, box-shadow .2s ease;
+/* Label flotante SOLO cuando hay foco o texto real */
+.field input:focus + label,
+.field textarea:focus + label,
+.field input:not(:focus):not([value=""]) + label,
+.field textarea:not(:focus):not(:empty) + label {
+  top: -7px;
+  font-size: 12px;
+  background: rgba(12,18,32,.95);
+  padding: 0 6px;
+  border-radius: 6px;
+  color: #9fdcff;
 }
 
-.field textarea { resize: none; }
-
-.field input:focus,
-.field textarea:focus {
-  border-color: rgba(152,191,208,.65);
-  box-shadow: 0 0 0 3px rgba(152,191,208,.18);
-  background: rgba(255, 255, 255, 0.10);
-}
 
 /* Labels flotantes */
 .field label {
@@ -277,6 +267,12 @@ img{
   border-radius: 6px;
   color: #9fdcff;
 }
+
+
+.field input {
+  min-height: 48px;
+}
+
 
 /* ---------- BOTÓN ENVIAR ---------- */
 .btn-submit {
@@ -683,4 +679,5 @@ img{
     border-radius: 16px 16px 0 0;
   }
 }
+
 
