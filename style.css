@@ -1068,6 +1068,39 @@ body.dark .stat-label{
   letter-spacing: .5px;
 }
 
+/* arreglo iamgen grande */
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.partner-item{
+  overflow: hidden;
+}
+
+.partner-item img{
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+  display: block;
+}
+
+.pop-panel{
+  width: 360px;
+  max-width: min(360px, 92vw);
+}
+.partners-grid{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.partner-item{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+}
 
 
 
