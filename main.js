@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== Fake Form Submit + Validación =====
   const form = document.getElementById("contactForm");
-  const status = document.getElementById("formMsg");
+ const status = document.getElementById("formStatus");
 
 
   if (form) {
@@ -79,3 +79,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
