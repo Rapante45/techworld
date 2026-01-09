@@ -1,639 +1,824 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technology World | Expertos en Tecnología</title>
-  <meta name="description" content="Technology World - Expertos en tecnología, soluciones digitales, soporte técnico y desarrollo web.">
-
-  <link rel="stylesheet" href="./style.css">
-<script type="module" src="./main.js"></script>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-content">
-     <div class="logo">
-  <div class="logo-text">
-    <h1>
-      Technology World
-      <span class="logo-pbx">PBX: 2254-9346</span>
-    </h1>
-    <span>Expertos en Tecnología</span>
-  </div>
-</div>
-
-
-      <nav class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto" class="btn">Contacto</a>
-      </nav>
-
-      
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="container hero-content">
-
-      <div class="hero-text">
-        <div>
-          <h2>Soluciones tecnológicas<br>para tu negocio</h2>
-          <p>
-            En Technology World brindamos servicios profesionales en desarrollo web,
-            soporte técnico, redes y soluciones digitales adaptadas a tus necesidades.
-          </p>
-          <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
-        </div>
-      </div>
-
-      <!-- Form -->
-      <div class="hero-box">
-        <h3>Contáctanos</h3>
-<form id="contactForm" class="contact-form">
-  <div class="field">
-    <input id="nombre" type="text" required />
-    <label for="nombre">Nombre completo</label>
-  </div>
-
-  <div class="field">
-    <input id="correo" type="email" required />
-    <label for="correo">Correo electrónico</label>
-  </div>
-
-  <div class="field">
-    <input id="telefono" type="text" required />
-    <label for="telefono">Teléfono</label>
-  </div>
-
-  <div class="field">
-    <textarea id="mensaje" rows="4" required></textarea>
-    <label for="mensaje">Cuéntanos qué necesitas</label>
-  </div>
-
-  <button type="submit" class="btn-submit">
-    <span class="btn-text">Enviar</span>
-    <span class="btn-loader"></span>
-  </button>
-
-  <p id="formMsg" class="form-msg"></p>
-</form>
-
-
-
-
-      </div>
-
-    </div>
-  </section>
-
-
-  
-
-   <!-- SERVICIOS -->
-  <section class="section" id="servicios">
-    <div class="container">
-      <div class="services-head">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        
-      </div>
-
-
-      
-<article class="service-card service-card--poster">
-  <!-- Imagen tipo afiche con texto encima -->
-  <div class="service-poster">
-    <img src="./Centrales Telefonicas.jpg" alt="Centrales Telefonicas" />
-
-   
-  </div>
-
-  <!-- Texto normal a la derecha -->
-  <div class="service-body">
-    <h3 class="service-title">Centrales Telefonicas</h3>
-    <p class="service-text">
-      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
-      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
-    </p>
-
-    <div class="service-actions">
-  
-
-  <!-- POPUP 1: Partners -->
-  <div class="partners pop">
-    <button class="partners-btn pop-btn" type="button" aria-haspopup="dialog">
-      <span class="partners-icon" aria-hidden="true">🤝</span>
-      Partners
-    </button>
-
-    <div class="partners-pop pop-panel" role="dialog" aria-label="Partners">
-      <div class="partners-grid">
-        <a class="partner-item" href="#" onclick="return false;">
-          <img src="./Grandstream.jpg" alt="Grandstream" />
-          <span>Grandstream</span>
-        </a>
-       
-      </div>
-    </div>
-  </div>
-
-  <!-- POPUP 2: Certificaciones (ejemplo distinto) -->
-  <div class="certs pop">
-    <button class="partners-btn pop-btn" type="button" aria-haspopup="dialog">
-      <span class="partners-icon" aria-hidden="true">👨🏻‍💻</span>
-      Soporte
-    </button>
-
-    <div class="certs-pop pop-panel" role="dialog" aria-label="Certificaciones">
-      <div class="partners-grid">
-        <a class="partner-item" href="#" onclick="return false;">
-          <img src="./NEC.png" alt="NEC" />
-          <span>NEC</span>
-        </a>
-        <a class="partner-item" href="#" onclick="return false;">
-          <img src="./Panasonic2.png" alt="Panasonic" />
-          <span>Panasonic</span>
-        </a>
-        
-      </div>
-    </div>
-  </div>
-
-  <a class="service-link" href="#contacto">Solicitar info</a>
-</div>
-
-</article>
-
-<br> 
-
-
-
-
-
-<!-- Cableado Estructurado -->
-<article class="service-card service-card--poster">
-  <div class="service-poster">
-    <img src="./cableado-estructurado.jpg" alt="Cableado Estructurado" />
-
-    
-  </div>
-
-  <div class="service-body">
-    <h3 class="service-title">Cableado Estructurado</h3>
-    <p class="service-text">
-      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
-      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
-    </p>
-
-    <div class="service-actions">
-      <!-- POPUP: Partners -->
-      <div class="pop">
-        <button class="partners-btn" type="button" aria-haspopup="dialog">
-          <span class="partners-icon" aria-hidden="true">🤝</span>
-          Partners
-        </button>
-
-        <div class="pop-panel" role="dialog" aria-label="Partners">
-          <div class="partners-grid">
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Siemon.png" alt="Siemon" />
-              <span>Siemon</span>
-            </a>
-
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Panduit.png" alt="Panduit" />
-              <span>Panduit</span>
-            </a>
-
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Linet.jpg" alt="Linet" />
-              <span>Linet</span>
-            </a>
-
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Ortronics.png" alt="Ortronics" />
-              <span>Ortronics</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <a class="service-link" href="#contacto">Solicitar info</a>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-<br>
-
-
-
-
-
-
-
-
-<!-- Networking -->
-<article class="service-card service-card--poster">
-  <div class="service-poster">
-    <img src="./Networking.png" alt=" Networking" />
-
-    
-  </div>
-
-  <div class="service-body">
-    <h3 class="service-title">Networking</h3>
-    <p class="service-text">
-      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
-      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
-    </p>
-
-    <div class="service-actions">
-      <!-- POPUP: Partners -->
-      <div class="pop">
-        <button class="partners-btn" type="button" aria-haspopup="dialog">
-          <span class="partners-icon" aria-hidden="true">🤝</span>
-          Partners
-        </button>
-
-        <!-- Zyxel -->
-        <div class="pop-panel" role="dialog" aria-label="Partners">
-          <div class="partners-grid">
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Zyxel.png" alt="Zyxel" />
-              <span>Siemon</span>
-            </a>
-
-            <!-- Grandstream -->
-
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Grandstream.jpg" alt="Grandstream" />
-              <span>Grandstream</span>
-            </a>
-
-
-            <!-- Mikrotik  -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Mikrotik.png" alt="Mikrotik" />
-              <span>Mikrotik</span>
-            </a>
-            <!-- Cisco -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Cisco.jpg" alt="Cisco" />
-              <span>Cisco</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <a class="service-link" href="#contacto">Solicitar info</a>
-    </div>
-  </div>
-</article>
-
-
-
-
-<br>
-
-
-
-
-
-
-
-<!-- Soluciones Wifi -->
-<article class="service-card service-card--poster">
-  <div class="service-poster">
-    <img src="./Wifi.jpeg" alt=" Wifi" />
-
-    
-  </div>
-
-  <div class="service-body">
-    <h3 class="service-title">Soluciones Wifi</h3>
-    <p class="service-text">
-      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
-      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
-    </p>
-
-    <div class="service-actions">
-      <!-- POPUP: Partners -->
-      <div class="pop">
-        <button class="partners-btn" type="button" aria-haspopup="dialog">
-          <span class="partners-icon" aria-hidden="true">🤝</span>
-          Partners
-        </button>
-
-        <!-- Ubiquiti  -->
-        <div class="pop-panel" role="dialog" aria-label="Partners">
-          <div class="partners-grid">
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Ubiquiti.png" alt="Ubiquiti" />
-              <span>Ubiquiti</span>
-            </a>
-
-            <!-- Zyxel  -->
-
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Zyxel.png" alt="Zyxel " />
-              <span>Zyxel</span>
-            </a>
-
-
-            <!-- Omada  -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Omada.jpg" alt="Omada" />
-              <span>Omada</span>
-            </a>
-            <!-- Grandstream -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Grandstream.jpg" alt="Grandstream" />
-              <span>Grandstream</span>
-            </a>
-
-            <!-- Aruba -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Aruba.jpg" alt="Aruba" />
-              <span>Aruba</span>
-            </a>
-
-
-
-            <!-- Meraki -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Meraki.png" alt="Meraki" />
-              <span>Meraki</span>
-            </a>
-
-
-          </div>
-        </div>
-      </div>
-
-      <a class="service-link" href="#contacto">Solicitar info</a>
-    </div>
-  </div>
-</article>
-
-
-
-
-<br>
-
-
-
-<!-- Video Vigilancia -->
-<article class="service-card service-card--poster">
-  <div class="service-poster">
-    <img src="./Videovigilancia.png" alt=" Wifi" />
-
-    
-  </div>
-
-  <div class="service-body">
-    <h3 class="service-title">Soluciones Wifi</h3>
-    <p class="service-text">
-      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
-      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
-    </p>
-
-    <div class="service-actions">
-      <!-- POPUP: Partners -->
-      <div class="pop">
-        <button class="partners-btn" type="button" aria-haspopup="dialog">
-          <span class="partners-icon" aria-hidden="true">🤝</span>
-          Partners
-        </button>
-
-        <!-- Hikvision  -->
-        <div class="pop-panel" role="dialog" aria-label="Partners">
-          <div class="partners-grid">
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Hikvision.png" alt="Hikvision" />
-              <span>Hikvision</span>
-            </a>
-
-            <!-- Dahua  -->
-
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Dahua.jpg" alt="Dahua " />
-              <span>Dahua</span>
-            </a>
-
-
-            <!-- Unifi  -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Unifi.png" alt="Unifi" />
-              <span>Unifi</span>
-            </a>
-          
-
-          </div>
-        </div>
-      </div>
-
-      <a class="service-link" href="#contacto">Solicitar info</a>
-    </div>
-  </div>
-</article>
-
-
-
-
-<br>
-
-
-
-
-
-
-
-
-<!-- Soporte y venta de equipo de computo -->
-<article class="service-card service-card--poster">
-  <div class="service-poster">
-    <img src="./Computo.jpg" alt=" Wifi" />
-
-    
-  </div>
-
-  <div class="service-body">
-    <h3 class="service-title">Soluciones Wifi</h3>
-    <p class="service-text">
-      Más de 20 años de experiencia en diseño, implementación y gestión de proyectos de infraestructura de red.
-      Protegemos tu inversión y ejecutamos en tiempo y presupuesto.
-    </p>
-
-    <div class="service-actions">
-      <!-- POPUP: Partners -->
-      <div class="pop">
-        <button class="partners-btn" type="button" aria-haspopup="dialog">
-          <span class="partners-icon" aria-hidden="true">🤝</span>
-          Partners
-        </button>
-
-        <!-- Dell -->
-        <div class="pop-panel" role="dialog" aria-label="Partners">
-          <div class="partners-grid">
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Dell.jpg" alt="Dell" />
-              <span>Dell</span>
-            </a>
-
-            <!-- HP  -->
-
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./HP.jpg" alt="HP " />
-              <span>HP</span>
-            </a>
-
-
-            <!-- Lenovo  -->
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Lenovo.png" alt="Lenovo" />
-              <span>Lenovo</span>
-            </a>
-          
-
-            <!-- !-- Kinsgton  --> 
-            <a class="partner-item" href="#" onclick="return false;">
-              <img src="./Kingston.jpg" alt="Kinsgton" />
-              <span>Kinsgton</span>
-            </a>
-
-          </div>
-        </div>
-      </div>
-
-      <a class="service-link" href="#contacto">Solicitar info</a>
-    </div>
-  </div>
-</article>
-
-
-
-
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- NOSOTROS -->
-  <section class="section light" id="nosotros">
-    <div class="container">
-      <h2 class="section-title">¿Por qué elegirnos?</h2>
-      <p class="center-text">
-        Trabajamos con responsabilidad, profesionalismo y enfoque en resultados.
-        Nuestro objetivo es que la tecnología sea una ventaja para tu empresa.
-      </p>
-
-      <div class="features">
-        <div>✔ Atención personalizada</div>
-        <div>✔ Soluciones claras</div>
-        <div>✔ Experiencia técnica</div>
-        <div>✔ Soporte confiable</div>
-      </div>
-    </div>
-
-<div class="stats">
-  <div class="stat-card">
-    <div class="stat-number">+10</div>
-    <div class="stat-label">Años de experiencia</div>
-  </div>
-
-  <div class="stat-card">
-    <div class="stat-number">+120</div>
-    <div class="stat-label">Proyectos / servicios</div>
-  </div>
-
-  <div class="stat-card">
-    <div class="stat-number">Guatemala</div>
-    <div class="stat-label">Atención y soporte</div>
-  </div>
-</div>
-
-
-
-  </section>
-
-
-  <a
-  class="wa-float"
-  href="https://wa.me/50222549346?text=Hola%20Technology%20World,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios."
-  target="_blank"
-  rel="noopener"
-  aria-label="WhatsApp"
->
-  <span class="wa-icon" aria-hidden="true">💬</span>
-  <span class="wa-text">WhatsApp</span>
-</a>
-
-
-  <!-- CONTACTO -->
-  <section class="section" id="contacto">
-    <div class="container">
-      <h2 class="section-title">Contacto</h2>
-      <p class="center-text">
-        Escríbenos y con gusto te asesoramos.
-      </p>
-
-      <div class="contact-info">
-        <div>📧 contacto@technologyworld.gt</div>
-        <div>📞 +502 2254-9346</div>
-        <div>📍 Guatemala</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Technology World | Expertos en Tecnología</p>
-  </footer>
-
-  <script type="module" src="./contact.js"></script>
-
-
-</body>
-</html>
+/* =====================================================
+   VARIABLES (DARK por defecto)
+   ===================================================== */
+:root{
+  /* Branding */
+  --azul-principal: #2E668A;
+  --azul-secundario: #6594AE;
+  --celeste: #98BFD0;
+
+  /* DARK default */
+  --bg: #0b1220;
+  --surface: #0f1a2d;
+  --surface-2: #0c1627;
+  --text: #eaf2f6;
+  --muted: rgba(255,255,255,.75);
+  --border: rgba(152,191,208,.22);
+  --shadow: 0 18px 40px rgba(0,0,0,.45);
+
+  /* Hero overlay dark */
+  --hero-grad-1: rgba(152,191,208,.12);
+  --hero-overlay-a: rgba(12,18,32,.92);
+  --hero-overlay-b: rgba(12,18,32,.86);
+  --hero-overlay-c: rgba(12,18,32,.72);
+
+  /* Hero logo opacity */
+  --hero-logo-opacity: .28;
+}
+
+/* LIGHT solo si pones body.light */
+body.light{
+  --bg: #F2FAFD;
+  --surface: #ffffff;
+  --surface-2: #f6fbfd;
+  --text: #0b1a2d;
+  --muted: rgba(11,26,45,.70);
+  --border: rgba(46,102,138,.22);
+  --shadow: 0 10px 25px rgba(0,0,0,.10);
+
+  /* Hero overlay light */
+  --hero-grad-1: rgba(46,102,138,.14);
+  --hero-overlay-a: rgba(234,246,251,.96);
+  --hero-overlay-b: rgba(234,246,251,.92);
+  --hero-overlay-c: rgba(234,246,251,.78);
+
+  --hero-logo-opacity: .14;
+}
+
+/* =====================================================
+   RESET
+   ===================================================== */
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+a{ text-decoration:none; color:inherit; }
+
+/* Normalizador global de imágenes */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================================
+   CONTAINER
+   ===================================================== */
+.container{
+  width: 92%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+.header{
+  position: relative;
+  background: var(--surface);
+  border-bottom: 3px solid var(--azul-principal);
+}
+
+.header-content{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-text h1{
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-text > span{
+  font-size:12px;
+  color: var(--azul-secundario);
+}
+
+.logo-pbx{
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--azul-secundario);
+  color: #fff;
+  letter-spacing: .3px;
+}
+
+.nav a{
+  margin-left:20px;
+  font-weight:bold;
+  color: var(--muted);
+}
+.nav a:hover{ color: var(--azul-principal); }
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
+.btn{
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--azul-principal);
+  color: #fff;
+  display:inline-block;
+  border: none;
+  cursor:pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
+}
+
+.btn-primary{
+  background: linear-gradient(135deg, var(--azul-principal), var(--azul-secundario));
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(0,0,0,.22);
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero{
+  position: relative;
+  padding: 90px 0;
+  min-height: 78vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background: var(--bg);
+}
+
+/* Overlay */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 520px at 20% 0%, var(--hero-grad-1), transparent 60%),
+    linear-gradient(90deg,
+      var(--hero-overlay-a) 0%,
+      var(--hero-overlay-b) 55%,
+      var(--hero-overlay-c) 100%);
+  z-index:0;
+}
+
+/* Logo background */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: url("./techworld-removebg-preview.png");
+  background-repeat:no-repeat;
+  background-position: left 18% center;
+  background-size: clamp(500px, 45vw, 760px);
+  opacity: var(--hero-logo-opacity);
+  z-index:0;
+}
+
+/* =====================================================
+   HERO CONTENT
+   ===================================================== */
+.hero-content{
+  position: relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 52px;
+  align-items:center;
+}
+
+.hero-text{
+  max-width: 620px;
+}
+
+.hero-text h2{
+  font-size: 50px;
+  line-height:1.05;
+  margin-bottom: 14px;
+}
+
+.hero-text p{
+  margin-bottom: 18px;
+  max-width: 520px;
+  color: var(--muted);
+}
+
+/* =====================================================
+   FORM HERO
+   ===================================================== */
+.hero-box{
+  padding: 28px;
+  border-radius: 14px;
+  border:1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: rgba(15,26,45,.76); /* dark default */
+}
+
+/* En light, el box se vuelve claro */
+body.light .hero-box{
+  background: rgba(255,255,255,.82);
+}
+
+.hero-box h3{
+  margin-bottom:14px;
+  color: #a7d7ea;
+}
+body.light .hero-box h3{
+  color: var(--azul-principal);
+}
+
+/* ---------- FORM (inputs flotantes) ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field { position: relative; }
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, background 0.2s ease, box-shadow .2s ease;
+}
+
+body.light .field input,
+body.light .field textarea{
+  border: 1px solid var(--border);
+  background: #fff;
+  color: #0b1a2d;
+}
+
+.field textarea { resize: none; }
+
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(152,191,208,.65);
+  box-shadow: 0 0 0 3px rgba(152,191,208,.18);
+  background: rgba(255, 255, 255, 0.10);
+}
+body.light .field input:focus,
+body.light .field textarea:focus{
+  border-color: rgba(46,102,138,.65);
+  box-shadow: 0 0 0 3px rgba(46,102,138,.14);
+  background: #fff;
+}
+
+/* Labels flotantes */
+.field label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.2s ease;
+  background: transparent;
+}
+
+body.light .field label{
+  color: rgba(11,26,45,.55);
+}
+
+.field textarea + label {
+  top: 18px;
+  transform: none;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
+  top: -7px;
+  font-size: 12px;
+  background: rgba(12,18,32,.95);
+  padding: 0 6px;
+  border-radius: 6px;
+  color: #9fdcff;
+}
+body.light .field input:focus + label,
+body.light .field input:not(:placeholder-shown) + label,
+body.light .field textarea:focus + label,
+body.light .field textarea:not(:placeholder-shown) + label{
+  background: #ffffff;
+  color: var(--azul-principal);
+  border: 1px solid rgba(46,102,138,.18);
+}
+
+/* ---------- BOTÓN ENVIAR ---------- */
+.btn-submit {
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  background: linear-gradient(135deg, #4fc3f7, #1976d2);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(79, 195, 247, 0.35);
+}
+
+.btn-submit:active { transform: scale(0.98); }
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Loader del botón */
+.btn-loader {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+.btn-submit.loading .btn-text { display: none; }
+.btn-submit.loading .btn-loader { display: block; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Mensaje */
+.form-msg {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* Validación visual */
+.field input.invalid,
+.field textarea.invalid{
+  border-color: rgba(255, 80, 80, .85) !important;
+  box-shadow: 0 0 0 3px rgba(255, 80, 80, .14) !important;
+}
+
+/* =====================================================
+   SECCIONES
+   ===================================================== */
+.section{ padding: 60px 0; }
+
+/* “light section” como variante (en dark se ve un panel un poco más claro) */
+.section.light{
+  background: var(--surface-2);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+body.light .section.light{
+  background: var(--surface);
+}
+
+.section-title{
+  text-align:center;
+  font-size: 30px;
+  margin-bottom:30px;
+  color: #a7d7ea;
+}
+body.light .section-title{
+  color: var(--azul-principal);
+}
+
+.center-text{
+  text-align:center;
+  max-width:700px;
+  margin:auto;
+  color: var(--muted);
+}
+
+/* =====================================================
+   SERVICIOS (tu layout antiguo cards)
+   ===================================================== */
+.services{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  background: var(--surface);
+  padding:20px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  border-top:4px solid var(--azul-secundario);
+  box-shadow:0 8px 18px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
+}
+.card p{ color: var(--muted); }
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(0,0,0,.18);
+}
+
+/* =====================================================
+   SERVICIOS VERTICAL + POPUPS + POSTER
+   ===================================================== */
+.services-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* tarjeta */
+.service-card{
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: visible; /* para que no corte popups */
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 190px;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+body.light .service-card{
+  border-color: rgba(46,102,138,.18);
+  background: rgba(255,255,255,.72);
+}
+
+.service-card:hover{ z-index: 10; border-color: rgba(255,255,255,.22); }
+body.light .service-card:hover{ border-color: rgba(46,102,138,.28); }
+
+.service-body{
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.service-title{
+  margin: 0;
+  font-size: 16px;
+}
+
+.service-text{
+  margin: 0;
+  opacity: .82;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.service-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.service-tag{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  opacity: .95;
+}
+
+body.light .service-tag{
+  border-color: rgba(46,102,138,.18);
+  background: rgba(46,102,138,.08);
+}
+
+.service-link{
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,.35);
+  padding-bottom: 2px;
+  opacity: .92;
+}
+body.light .service-link{
+  border-bottom-color: rgba(46,102,138,.45);
+}
+
+/* ===== Popup base ===== */
+.pop{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.partners-btn{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: inherit;
+  cursor: pointer;
+  opacity: .95;
+}
+
+body.light .partners-btn{
+  border-color: rgba(46,102,138,.22);
+  background: rgba(46,102,138,.08);
+}
+
+/* Panel sale hacia arriba */
+.pop-panel{
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 12px);
+
+  width: 360px;
+  max-width: min(360px, 92vw);
+
+  padding: 12px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(12,18,32,.95);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 50;
+}
+
+body.light .pop-panel{
+  background: rgba(255,255,255,.97);
+  border-color: rgba(46,102,138,.18);
+}
+
+.pop-panel::before{
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  background: rgba(12,18,32,.95);
+  border-right: 1px solid rgba(255,255,255,.14);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  transform: rotate(45deg);
+}
+
+body.light .pop-panel::before{
+  background: rgba(255,255,255,.97);
+  border-right-color: rgba(46,102,138,.18);
+  border-bottom-color: rgba(46,102,138,.18);
+}
+
+.pop:hover .pop-panel,
+.pop:focus-within .pop-panel{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* grid de logos */
+.partners-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.partner-item{
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  padding: 10px 8px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+
+  overflow: hidden;
+}
+
+body.light .partner-item{
+  background: rgba(46,102,138,.06);
+  border-color: rgba(46,102,138,.18);
+}
+
+.partner-item img{
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+}
+
+.partner-item span{
+  font-size: 12px;
+  opacity: .9;
+  text-align: center;
+}
+
+/* =========================
+   SERVICE POSTER (imagen a la izquierda)
+   ========================= */
+.service-card--poster{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 0;
+}
+
+.service-poster{
+  border-radius: 16px 0 0 16px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255,255,255,.06);
+}
+body.light .service-poster{ background: rgba(46,102,138,.06); }
+
+.service-poster img{
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+/* =====================================================
+   FEATURES
+   ===================================================== */
+.features{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:15px;
+  margin-top:30px;
+  text-align:center;
+}
+
+.features > div{
+  background: var(--surface-2);
+  border:1px solid var(--border);
+  padding:14px;
+  border-radius:10px;
+}
+
+/* =====================================================
+   STATS
+   ===================================================== */
+.stats{
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat-card{
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-number{
+  font-size: 26px;
+  font-weight: 800;
+  color: #a7d7ea;
+}
+body.light .stat-number{ color: var(--azul-principal); }
+
+.stat-label{
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* =====================================================
+   CONTACTO
+   ===================================================== */
+.contact-info{
+  text-align:center;
+  display:grid;
+  gap:10px;
+  font-weight:bold;
+  color: var(--muted);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer{
+  background: #0b1a2d;
+  color: rgba(255,255,255,.86);
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align:center;
+}
+
+body.light .footer{
+  background: #0b1a2d;
+  color: rgba(255,255,255,.86);
+}
+
+/* =====================================================
+   WHATSAPP FLOAT
+   ===================================================== */
+.wa-float{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: #25D366;
+  color: #07310f;
+  font-weight: 800;
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  border: 1px solid rgba(0,0,0,.12);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.wa-icon{ font-size: 18px; line-height: 1; }
+.wa-text{ font-size: 14px; }
+
+.wa-float:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 22px 50px rgba(0,0,0,.40);
+}
+
+@media (max-width: 520px){
+  .wa-text{ display:none; }
+  .wa-float{ padding: 12px; }
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 980px){
+  .hero-content{
+    grid-template-columns: 1fr;
+    gap:28px;
+  }
+
+  .hero-text{
+    text-align:center;
+    margin:auto;
+  }
+
+  .hero-text h2{ font-size:40px; }
+
+  .hero{
+    padding-top:320px;
+  }
+
+  .hero::after{
+    background-position:center 30px;
+    background-size:520px auto;
+  }
+}
+
+@media (max-width: 768px){
+  .services{ grid-template-columns:1fr; }
+  .features{ grid-template-columns:1fr; }
+  .nav{ display:none; }
+}
+
+@media (max-width: 700px){
+  .service-card{
+    grid-template-columns: 1fr;
+  }
+  .service-card--poster{
+    grid-template-columns: 1fr;
+  }
+  .service-poster{
+    border-radius: 16px 16px 0 0;
+  }
+}
