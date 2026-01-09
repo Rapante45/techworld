@@ -1,5 +1,5 @@
 /* =====================================================
-   VARIABLES (DARK por defecto)
+   VARIABLES (SOLO DARK)
    ===================================================== */
 :root{
   /* Branding */
@@ -16,7 +16,7 @@
   --border: rgba(152,191,208,.22);
   --shadow: 0 18px 40px rgba(0,0,0,.45);
 
-  /* Hero overlay dark */
+  /* Hero overlay */
   --hero-grad-1: rgba(152,191,208,.12);
   --hero-overlay-a: rgba(12,18,32,.92);
   --hero-overlay-b: rgba(12,18,32,.86);
@@ -24,25 +24,6 @@
 
   /* Hero logo opacity */
   --hero-logo-opacity: .28;
-}
-
-/* LIGHT solo si pones body.light */
-body.light{
-  --bg: #F2FAFD;
-  --surface: #ffffff;
-  --surface-2: #f6fbfd;
-  --text: #0b1a2d;
-  --muted: rgba(11,26,45,.70);
-  --border: rgba(46,102,138,.22);
-  --shadow: 0 10px 25px rgba(0,0,0,.10);
-
-  /* Hero overlay light */
-  --hero-grad-1: rgba(46,102,138,.14);
-  --hero-overlay-a: rgba(234,246,251,.96);
-  --hero-overlay-b: rgba(234,246,251,.92);
-  --hero-overlay-c: rgba(234,246,251,.78);
-
-  --hero-logo-opacity: .14;
 }
 
 /* =====================================================
@@ -228,20 +209,12 @@ img{
   border-radius: 14px;
   border:1px solid var(--border);
   box-shadow: var(--shadow);
-  background: rgba(15,26,45,.76); /* dark default */
-}
-
-/* En light, el box se vuelve claro */
-body.light .hero-box{
-  background: rgba(255,255,255,.82);
+  background: rgba(15,26,45,.76);
 }
 
 .hero-box h3{
   margin-bottom:14px;
   color: #a7d7ea;
-}
-body.light .hero-box h3{
-  color: var(--azul-principal);
 }
 
 /* ---------- FORM (inputs flotantes) ---------- */
@@ -266,13 +239,6 @@ body.light .hero-box h3{
   transition: border 0.2s ease, background 0.2s ease, box-shadow .2s ease;
 }
 
-body.light .field input,
-body.light .field textarea{
-  border: 1px solid var(--border);
-  background: #fff;
-  color: #0b1a2d;
-}
-
 .field textarea { resize: none; }
 
 .field input:focus,
@@ -280,12 +246,6 @@ body.light .field textarea{
   border-color: rgba(152,191,208,.65);
   box-shadow: 0 0 0 3px rgba(152,191,208,.18);
   background: rgba(255, 255, 255, 0.10);
-}
-body.light .field input:focus,
-body.light .field textarea:focus{
-  border-color: rgba(46,102,138,.65);
-  box-shadow: 0 0 0 3px rgba(46,102,138,.14);
-  background: #fff;
 }
 
 /* Labels flotantes */
@@ -299,10 +259,6 @@ body.light .field textarea:focus{
   pointer-events: none;
   transition: 0.2s ease;
   background: transparent;
-}
-
-body.light .field label{
-  color: rgba(11,26,45,.55);
 }
 
 .field textarea + label {
@@ -320,14 +276,6 @@ body.light .field label{
   padding: 0 6px;
   border-radius: 6px;
   color: #9fdcff;
-}
-body.light .field input:focus + label,
-body.light .field input:not(:placeholder-shown) + label,
-body.light .field textarea:focus + label,
-body.light .field textarea:not(:placeholder-shown) + label{
-  background: #ffffff;
-  color: var(--azul-principal);
-  border: 1px solid rgba(46,102,138,.18);
 }
 
 /* ---------- BOTÓN ENVIAR ---------- */
@@ -392,24 +340,11 @@ body.light .field textarea:not(:placeholder-shown) + label{
    ===================================================== */
 .section{ padding: 60px 0; }
 
-/* “light section” como variante (en dark se ve un panel un poco más claro) */
-.section.light{
-  background: var(--surface-2);
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-body.light .section.light{
-  background: var(--surface);
-}
-
 .section-title{
   text-align:center;
   font-size: 30px;
   margin-bottom:30px;
   color: #a7d7ea;
-}
-body.light .section-title{
-  color: var(--azul-principal);
 }
 
 .center-text{
@@ -417,256 +352,6 @@ body.light .section-title{
   max-width:700px;
   margin:auto;
   color: var(--muted);
-}
-
-/* =====================================================
-   SERVICIOS (tu layout antiguo cards)
-   ===================================================== */
-.services{
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
-  gap:20px;
-}
-
-.card{
-  background: var(--surface);
-  padding:20px;
-  border-radius:12px;
-  border:1px solid var(--border);
-  border-top:4px solid var(--azul-secundario);
-  box-shadow:0 8px 18px rgba(0,0,0,.06);
-  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
-}
-.card p{ color: var(--muted); }
-.card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 16px 30px rgba(0,0,0,.18);
-}
-
-/* =====================================================
-   SERVICIOS VERTICAL + POPUPS + POSTER
-   ===================================================== */
-.services-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-/* tarjeta */
-.service-card{
-  position: relative;
-  z-index: 1;
-  border-radius: 16px;
-  overflow: visible; /* para que no corte popups */
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.18);
-  backdrop-filter: blur(10px);
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  min-height: 190px;
-  transition: transform 180ms ease, border-color 180ms ease;
-}
-body.light .service-card{
-  border-color: rgba(46,102,138,.18);
-  background: rgba(255,255,255,.72);
-}
-
-.service-card:hover{ z-index: 10; border-color: rgba(255,255,255,.22); }
-body.light .service-card:hover{ border-color: rgba(46,102,138,.28); }
-
-.service-body{
-  padding: 16px;
-  display: grid;
-  gap: 8px;
-}
-
-.service-title{
-  margin: 0;
-  font-size: 16px;
-}
-
-.service-text{
-  margin: 0;
-  opacity: .82;
-  line-height: 1.45;
-  font-size: 14px;
-}
-
-.service-actions{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 4px;
-}
-
-.service-tag{
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
-  opacity: .95;
-}
-
-body.light .service-tag{
-  border-color: rgba(46,102,138,.18);
-  background: rgba(46,102,138,.08);
-}
-
-.service-link{
-  font-size: 13px;
-  text-decoration: none;
-  border-bottom: 1px dashed rgba(255,255,255,.35);
-  padding-bottom: 2px;
-  opacity: .92;
-}
-body.light .service-link{
-  border-bottom-color: rgba(46,102,138,.45);
-}
-
-/* ===== Popup base ===== */
-.pop{
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-.partners-btn{
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.06);
-  color: inherit;
-  cursor: pointer;
-  opacity: .95;
-}
-
-body.light .partners-btn{
-  border-color: rgba(46,102,138,.22);
-  background: rgba(46,102,138,.08);
-}
-
-/* Panel sale hacia arriba */
-.pop-panel{
-  position: absolute;
-  left: 0;
-  bottom: calc(100% + 12px);
-
-  width: 360px;
-  max-width: min(360px, 92vw);
-
-  padding: 12px;
-  border-radius: 16px;
-
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(12,18,32,.95);
-  backdrop-filter: blur(10px);
-
-  opacity: 0;
-  transform: translateY(6px);
-  pointer-events: none;
-  transition: opacity 160ms ease, transform 160ms ease;
-  z-index: 50;
-}
-
-body.light .pop-panel{
-  background: rgba(255,255,255,.97);
-  border-color: rgba(46,102,138,.18);
-}
-
-.pop-panel::before{
-  content: "";
-  position: absolute;
-  bottom: -7px;
-  left: 18px;
-  width: 12px;
-  height: 12px;
-  background: rgba(12,18,32,.95);
-  border-right: 1px solid rgba(255,255,255,.14);
-  border-bottom: 1px solid rgba(255,255,255,.14);
-  transform: rotate(45deg);
-}
-
-body.light .pop-panel::before{
-  background: rgba(255,255,255,.97);
-  border-right-color: rgba(46,102,138,.18);
-  border-bottom-color: rgba(46,102,138,.18);
-}
-
-.pop:hover .pop-panel,
-.pop:focus-within .pop-panel{
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* grid de logos */
-.partners-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.partner-item{
-  display: grid;
-  place-items: center;
-  gap: 6px;
-  padding: 10px 8px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: inherit;
-
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-
-  overflow: hidden;
-}
-
-body.light .partner-item{
-  background: rgba(46,102,138,.06);
-  border-color: rgba(46,102,138,.18);
-}
-
-.partner-item img{
-  width: 44px !important;
-  height: 44px !important;
-  max-width: 44px !important;
-  max-height: 44px !important;
-  object-fit: contain !important;
-}
-
-.partner-item span{
-  font-size: 12px;
-  opacity: .9;
-  text-align: center;
-}
-
-/* =========================
-   SERVICE POSTER (imagen a la izquierda)
-   ========================= */
-.service-card--poster{
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 0;
-}
-
-.service-poster{
-  border-radius: 16px 0 0 16px;
-  overflow: hidden;
-  position: relative;
-  background: rgba(255,255,255,.06);
-}
-body.light .service-poster{ background: rgba(46,102,138,.06); }
-
-.service-poster img{
-  width: 100%;
-  height: 100%;
-  min-height: 220px;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.02);
 }
 
 /* =====================================================
@@ -710,12 +395,194 @@ body.light .service-poster{ background: rgba(46,102,138,.06); }
   font-weight: 800;
   color: #a7d7ea;
 }
-body.light .stat-number{ color: var(--azul-principal); }
 
 .stat-label{
   margin-top: 6px;
   color: var(--muted);
   font-weight: 600;
+}
+
+/* =====================================================
+   SERVICIOS VERTICAL + POPUPS + POSTER
+   ===================================================== */
+.services-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* tarjeta */
+.service-card{
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: visible;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 190px;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.service-card:hover{
+  z-index: 10;
+  border-color: rgba(255,255,255,.22);
+}
+
+.service-body{
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.service-title{
+  margin: 0;
+  font-size: 16px;
+}
+
+.service-text{
+  margin: 0;
+  opacity: .82;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.service-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.service-link{
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,.35);
+  padding-bottom: 2px;
+  opacity: .92;
+}
+
+/* ===== Popup base ===== */
+.pop{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.partners-btn{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: inherit;
+  cursor: pointer;
+  opacity: .95;
+}
+
+/* Panel sale hacia arriba */
+.pop-panel{
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 12px);
+
+  width: 360px;
+  max-width: min(360px, 92vw);
+
+  padding: 12px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(12,18,32,.95);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 50;
+}
+
+.pop-panel::before{
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  background: rgba(12,18,32,.95);
+  border-right: 1px solid rgba(255,255,255,.14);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  transform: rotate(45deg);
+}
+
+.pop:hover .pop-panel,
+.pop:focus-within .pop-panel{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* grid de logos */
+.partners-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.partner-item{
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  padding: 10px 8px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  overflow: hidden;
+}
+
+.partner-item img{
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+}
+
+.partner-item span{
+  font-size: 12px;
+  opacity: .9;
+  text-align: center;
+}
+
+/* =========================
+   SERVICE POSTER
+   ========================= */
+.service-card--poster{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 0;
+}
+
+.service-poster{
+  border-radius: 16px 0 0 16px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255,255,255,.06);
+}
+
+.service-poster img{
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
 }
 
 /* =====================================================
@@ -738,11 +605,6 @@ body.light .stat-number{ color: var(--azul-principal); }
   padding: 20px 0;
   margin-top: 40px;
   text-align:center;
-}
-
-body.light .footer{
-  background: #0b1a2d;
-  color: rgba(255,255,255,.86);
 }
 
 /* =====================================================
@@ -806,7 +668,6 @@ body.light .footer{
 }
 
 @media (max-width: 768px){
-  .services{ grid-template-columns:1fr; }
   .features{ grid-template-columns:1fr; }
   .nav{ display:none; }
 }
