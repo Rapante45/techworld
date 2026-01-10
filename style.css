@@ -138,13 +138,14 @@ img{
    ===================================================== */
 .hero{
   position: relative;
-  padding: 90px 0;
-  min-height: 78vh;
+  padding: 56px 0;      /* menos aire */
+  min-height: 0;        /* quita el empuje raro */
   display:flex;
-  align-items:center;
+  align-items:flex-start; /* en vez de center */
   overflow:hidden;
   background: var(--bg);
 }
+
 
 /* Overlay */
 .hero::before{
@@ -693,4 +694,5 @@ img{
     border-radius: 16px 16px 0 0;
   }
 }
+
 
