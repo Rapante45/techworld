@@ -1,5 +1,5 @@
 /* =====================================================
-   VARIABLES (SOLO DARK)s
+   VARIABLES (SOLO DARK)
    ===================================================== */
 :root{
   /* Branding */
@@ -218,28 +218,47 @@ img{
 }
 
 /* ---------- FORM (inputs flotantes) ---------- */
-.contact-form {
+.contact-form{
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-/* Label flotante SOLO cuando hay foco o texto real */
-.field input:focus + label,
-.field textarea:focus + label,
-.field input:not(:focus):not([value=""]) + label,
-.field textarea:not(:focus):not(:empty) + label {
-  top: -7px;
-  font-size: 12px;
-  background: rgba(12,18,32,.95);
-  padding: 0 6px;
-  border-radius: 6px;
-  color: #9fdcff;
+.field{
+  position: relative;
 }
 
+.field input,
+.field textarea{
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, background 0.2s ease, box-shadow .2s ease;
+}
 
-/* Labels flotantes */
-.field label {
+.field input{
+  min-height: 48px;
+}
+
+.field textarea{
+  resize: none;
+  min-height: 120px;
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color: rgba(152,191,208,.65);
+  box-shadow: 0 0 0 3px rgba(152,191,208,.18);
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* Labels */
+.field label{
   position: absolute;
   left: 12px;
   top: 50%;
@@ -248,18 +267,16 @@ img{
   font-size: 14px;
   pointer-events: none;
   transition: 0.2s ease;
-  background: transparent;
 }
 
-.field textarea + label {
+.field textarea + label{
   top: 18px;
   transform: none;
 }
 
+/* Label flotante SOLO en focus */
 .field input:focus + label,
-.field input:not(:placeholder-shown) + label,
-.field textarea:focus + label,
-.field textarea:not(:placeholder-shown) + label {
+.field textarea:focus + label{
   top: -7px;
   font-size: 12px;
   background: rgba(12,18,32,.95);
@@ -268,14 +285,8 @@ img{
   color: #9fdcff;
 }
 
-
-.field input {
-  min-height: 48px;
-}
-
-
 /* ---------- BOTÓN ENVIAR ---------- */
-.btn-submit {
+.btn-submit{
   margin-top: 6px;
   padding: 12px;
   border-radius: 12px;
@@ -290,20 +301,20 @@ img{
   transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
 
-.btn-submit:hover {
+.btn-submit:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(79, 195, 247, 0.35);
 }
 
-.btn-submit:active { transform: scale(0.98); }
+.btn-submit:active{ transform: scale(0.98); }
 
-.btn-submit:disabled {
+.btn-submit:disabled{
   opacity: 0.7;
   cursor: not-allowed;
 }
 
 /* Loader del botón */
-.btn-loader {
+.btn-loader{
   display: none;
   width: 18px;
   height: 18px;
@@ -313,13 +324,14 @@ img{
   animation: spin 1s linear infinite;
   margin: auto;
 }
-.btn-submit.loading .btn-text { display: none; }
-.btn-submit.loading .btn-loader { display: block; }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+.btn-submit.loading .btn-text{ display: none; }
+.btn-submit.loading .btn-loader{ display: block; }
+
+@keyframes spin{ to { transform: rotate(360deg); } }
 
 /* Mensaje */
-.form-msg {
+.form-msg{
   font-size: 13px;
   margin-top: 6px;
 }
@@ -407,7 +419,6 @@ img{
   gap: 16px;
 }
 
-/* tarjeta */
 .service-card{
   position: relative;
   z-index: 1;
@@ -461,7 +472,6 @@ img{
   opacity: .92;
 }
 
-/* ===== Popup base ===== */
 .pop{
   position: relative;
   display: inline-flex;
@@ -556,9 +566,7 @@ img{
   text-align: center;
 }
 
-/* =========================
-   SERVICE POSTER
-   ========================= */
+/* Poster */
 .service-card--poster{
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -679,5 +687,3 @@ img{
     border-radius: 16px 16px 0 0;
   }
 }
-
-
