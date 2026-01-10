@@ -219,70 +219,76 @@ img{
 
 /* ---------- FORM (inputs flotantes) ---------- */
 .contact-form{
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
 }
 
 .field{
-  position: relative;
+  position:relative;
 }
+
 
 .field input,
 .field textarea{
-  width: 100%;
-  padding: 14px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.07);
-  color: #fff;
-  font-size: 14px;
-  outline: none;
-  transition: border 0.2s ease, background 0.2s ease, box-shadow .2s ease;
+  width:100%;
+  padding:14px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.07);
+  color:#fff;
+  font-size:14px;
+  outline:none;
+  transition: border .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
-.field input{
-  min-height: 48px;
-}
+
+.field input{ min-height:48px; }
+
+
 
 .field textarea{
-  resize: none;
-  min-height: 120px;
+  resize:none;
+  min-height:120px;
 }
+
 
 .field input:focus,
 .field textarea:focus{
   border-color: rgba(152,191,208,.65);
   box-shadow: 0 0 0 3px rgba(152,191,208,.18);
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255,255,255,.10);
 }
 
-/* Labels */
+/* Label */
 .field label{
-  position: absolute;
-  left: 12px;
-  top: 50%;
+  position:absolute;
+  left:12px;
+  top:50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 14px;
-  pointer-events: none;
-  transition: 0.2s ease;
+  color: rgba(255,255,255,.65);
+  font-size:14px;
+  pointer-events:none;
+  transition: .2s ease;
 }
+
 
 .field textarea + label{
-  top: 18px;
-  transform: none;
+  top:18px;
+  transform:none;
 }
 
-/* Label flotante SOLO en focus */
+/* Flota cuando hay foco O cuando ya tiene texto (placeholder=" " habilita :placeholder-shown) */
 .field input:focus + label,
-.field textarea:focus + label{
-  top: -7px;
-  font-size: 12px;
+.field textarea:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:not(:placeholder-shown) + label{
+  top:-7px;
+  font-size:12px;
   background: rgba(12,18,32,.95);
-  padding: 0 6px;
-  border-radius: 6px;
-  color: #9fdcff;
+  padding:0 6px;
+  border-radius:6px;
+  color:#9fdcff;
 }
 
 /* ---------- BOTÓN ENVIAR ---------- */
@@ -687,3 +693,4 @@ img{
     border-radius: 16px 16px 0 0;
   }
 }
+
