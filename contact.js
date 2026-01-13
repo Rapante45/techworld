@@ -1,9 +1,11 @@
 const form = document.getElementById("contactForm");
 const formMsg = document.getElementById("formMsg");
 
-// URL de tu Edge Function (ya la tenés funcionando)
 const FUNCTION_URL =
   "https://mlcdpcwxmetruidbbsqz.supabase.co/functions/v1/send-lead";
+
+// Tu anon key (la que ya usabas en el frontend)
+const SUPABASE_ANON_KEY = "sb_publishable_at5RSE6MtpExGx48HFu_lQ_MlLK3Jqs";
 
 function setMsg(text) {
   if (formMsg) formMsg.textContent = text;
@@ -17,7 +19,6 @@ form?.addEventListener("submit", async (e) => {
   const telefono = document.getElementById("telefono")?.value.trim();
   const mensaje = document.getElementById("mensaje")?.value.trim();
 
-  // Validación simple
   if (!nombre || !correo || !telefono || !mensaje) {
     setMsg("Llená todos los campos.");
     return;
@@ -28,14 +29,19 @@ form?.addEventListener("submit", async (e) => {
   try {
     const res = await fetch(FUNCTION_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPABASE_ANON_KEY,
+        "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+      },
       body: JSON.stringify({ nombre, correo, telefono, mensaje }),
     });
 
     const data = await res.json();
 
     if (!res.ok) {
-      throw new Error(data?.error || "Error al enviar");
+      console.error("Edge Function error:", data);
+      throw new Error(data?.error || "Error");
     }
 
     setMsg("¡Listo! Revisá tu correo ✅");
