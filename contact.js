@@ -1,15 +1,12 @@
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
-
-const SUPABASE_URL = "https://mlcdpcwxmetruidbbsqz.supabase.co";
-const SUPABASE_KEY = "sb_publishable_at5RSE6MtpExGx48HFu_lQ_MlLK3Jqs"; 
-
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-
 const form = document.getElementById("contactForm");
 const formMsg = document.getElementById("formMsg");
 
-if (!form) {
-  console.error("No existe #contactForm en el HTML");
+// URL de tu Edge Function (ya la tenés funcionando)
+const FUNCTION_URL =
+  "https://mlcdpcwxmetruidbbsqz.supabase.co/functions/v1/send-lead";
+
+function setMsg(text) {
+  if (formMsg) formMsg.textContent = text;
 }
 
 form?.addEventListener("submit", async (e) => {
@@ -20,27 +17,31 @@ form?.addEventListener("submit", async (e) => {
   const telefono = document.getElementById("telefono")?.value.trim();
   const mensaje = document.getElementById("mensaje")?.value.trim();
 
-  console.log("Datos:", { nombre, correo, telefono, mensaje });
-
-  // Como pusiste NOT NULL en casi todo, validamos
+  // Validación simple
   if (!nombre || !correo || !telefono || !mensaje) {
-    if (formMsg) formMsg.textContent = "Llená todos los campos.";
+    setMsg("Llená todos los campos.");
     return;
   }
 
-  if (formMsg) formMsg.textContent = "Enviando...";
+  setMsg("Enviando...");
 
-  const { data, error } = await supabase.from("leads").insert([
-    { nombre, correo, telefono, mensaje }
-  ]);
+  try {
+    const res = await fetch(FUNCTION_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, correo, telefono, mensaje }),
+    });
 
-  console.log("Respuesta:", { data, error });
+    const data = await res.json();
 
-  if (error) {
-    if (formMsg) formMsg.textContent = "Error: " + error.message;
-    return;
+    if (!res.ok) {
+      throw new Error(data?.error || "Error al enviar");
+    }
+
+    setMsg("¡Listo! Revisá tu correo ✅");
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    setMsg("No se pudo enviar. Intentá de nuevo.");
   }
-
-  if (formMsg) formMsg.textContent = "¡Listo! Te contactaremos pronto ✅";
-  form.reset();
 });
