@@ -10,6 +10,7 @@ function setMsg(text) {
   if (formMsg) formMsg.textContent = text;
 }
 
+// Debug inicial
 if (!form) {
   console.error("❌ No se encontró #contactForm en el HTML");
 } else {
@@ -37,14 +38,19 @@ form?.addEventListener("submit", async (e) => {
       headers: {
         "Content-Type": "application/json",
         "apikey": SUPABASE_ANON_KEY
-        // 👇 NO mandamos Authorization porque anon_key NO es JWT
+        // 🔒 NO Authorization (JWT apagado en la function)
       },
-      body: JSON.stringify({ nombre, correo, telefono, mensaje }),
+      body: JSON.stringify({
+        nombre,
+        correo,
+        telefono,
+        mensaje
+      }),
     });
 
-    const text = await res.text(); // para ver errores aunque no sea JSON
-    console.log("Status:", res.status);
-    console.log("Response:", text);
+    const responseText = await res.text();
+    console.log("HTTP Status:", res.status);
+    console.log("Response:", responseText);
 
     if (!res.ok) {
       setMsg(`No se pudo enviar (HTTP ${res.status}).`);
@@ -53,8 +59,9 @@ form?.addEventListener("submit", async (e) => {
 
     setMsg("¡Listo! Revisá tu correo ✅");
     form.reset();
+
   } catch (err) {
-    console.error(err);
+    console.error("Fetch error:", err);
     setMsg("No se pudo enviar. Intentá de nuevo.");
   }
 });
