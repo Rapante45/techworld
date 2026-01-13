@@ -55,8 +55,20 @@
       </div>
 
    
-   <!-- Form -->
-      <form id="contactForm" class="contact-form">
+  <!-- Form -->
+<form id="contactForm" class="contact-form">
+
+  <!-- Honeypot anti-spam (NO tocar estilos ni mostrar) -->
+  <div class="hp-wrap" aria-hidden="true">
+    <input
+      type="text"
+      id="company"
+      name="company"
+      tabindex="-1"
+      autocomplete="off"
+    />
+  </div>
+
   <div class="field">
     <input id="nombre" type="text" required placeholder=" " />
     <label for="nombre">Nombre completo</label>
@@ -84,6 +96,7 @@
 
   <p id="formMsg" class="form-msg"></p>
 </form>
+
 
 
 
@@ -640,6 +653,7 @@
 
 </body>
 </html>
+
 
 
 
