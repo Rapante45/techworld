@@ -25,6 +25,15 @@ form?.addEventListener("submit", async (e) => {
   const telefono = document.getElementById("telefono")?.value.trim();
   const mensaje = document.getElementById("mensaje")?.value.trim();
 
+  // 🛡️ 
+  const company = document.getElementById("company")?.value.trim();
+  if (company) {
+    // Bot detectado → no hacemos nada
+    console.warn("🤖 Spam detectado (honeypot)");
+    setMsg("Enviando...");
+    return;
+  }
+
   if (!nombre || !correo || !telefono || !mensaje) {
     setMsg("Llená todos los campos.");
     return;
@@ -38,7 +47,6 @@ form?.addEventListener("submit", async (e) => {
       headers: {
         "Content-Type": "application/json",
         "apikey": SUPABASE_ANON_KEY
-        // 🔒 NO Authorization (JWT apagado en la function)
       },
       body: JSON.stringify({
         nombre,
