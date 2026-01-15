@@ -169,7 +169,7 @@ img{
   inset:0;
   background-image: url("./techworld-removebg-preview.png");
   background-repeat:no-repeat;
-  background-position: left 18% center;
+  background-position: 50% center;
   background-size: clamp(500px, 45vw, 760px);
   opacity: var(--hero-logo-opacity);
   z-index:0;
@@ -721,4 +721,5 @@ img{
   height: 1px !important;
   opacity: 0 !important;
 }
+
 
